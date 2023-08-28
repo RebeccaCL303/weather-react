@@ -6,6 +6,12 @@ function App() {
   <div className="App">
    <h1>Weather App</h1>
    <Weather />
+   <p>
+    <a href="https://github.com/BEX-0/weather-react" target="_blank">
+     Open Source Code
+    </a>{" "}
+    by Rebecca Leibowitz
+   </p>
   </div>
  );
 }
