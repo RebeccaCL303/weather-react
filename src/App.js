@@ -10,7 +10,7 @@ function App() {
     <a
      href="https://github.com/BEX-0/weather-react"
      target="_blank"
-     rel="noopener"
+     rel="noreferrer"
     >
      Open Source Code
     </a>{" "}
