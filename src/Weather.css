@@ -3,8 +3,7 @@
  --darker-main: #9c191b;
 }
 
-.Weather body {
- background-color: #151515;
+.Weather {
  color: white;
  text-align: center;
  font-family: "Ubuntu", sans serif;

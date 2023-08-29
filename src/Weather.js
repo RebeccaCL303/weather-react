@@ -8,15 +8,13 @@ export default function Weather() {
    <div className="main-body">
     <form className="text-center" id="city-search">
      <input type="text" id="city-input" placeholder="Enter City Here" />
-     <input type="submit" className="btn btn-outline-light" />
+     <input type="submit" className="btn btn-outline-light ms-1" />
     </form>
     <h1>
      <div className="row justify-content-evenly">
       <div className="col top-upper-left">
        <div className="city">Tokyo</div>
-       <small>
-        <div className="date-time">Tuesday 3:02</div>
-       </small>
+       <div className="date-time fs-3 fw-normal">Tuesday 3:02</div>
        <ul className="weather-details">
         <li>
          <span className="current-condition">Cloudy</span>

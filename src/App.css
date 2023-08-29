@@ -2,6 +2,12 @@
  --lighter-main: #dd2c2f;
 }
 
+.App {
+ background-color: #151515;
+ color: white;
+ margin: 0px;
+}
+
 .App a {
  color: var(--lighter-main);
  text-decoration: none;
@@ -10,4 +16,5 @@
 .App footer {
  text-align: center;
  font-size: 18px;
+ padding-bottom: 40px;
 }
