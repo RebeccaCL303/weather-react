@@ -3,7 +3,7 @@ import Weather from "./Weather.js";
 
 function App() {
  return (
-  <div className="App">
+  <div className="App container">
    <Weather />
    <p>
     <a
@@ -11,7 +11,7 @@ function App() {
      target="_blank"
      rel="noreferrer"
     >
-     Open Source Code
+     <strong>Open Source Code</strong>
     </a>{" "}
     by Rebecca Leibowitz
    </p>

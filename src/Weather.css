@@ -1,3 +1,8 @@
+:root {
+ --lighter-main: #dd2c2f;
+ --darker-main: #9c191b;
+}
+
 body {
  background-color: #151515;
  color: white;
@@ -7,7 +12,7 @@ body {
 
 a {
  text-decoration: none;
- color: #00dfff;
+ color: var(--darker-main);
  padding-bottom: 20px;
 }
 
@@ -32,7 +37,7 @@ a {
 .high-low,
 .weather-details {
  font-family: monospace;
- color: #00dfff;
+ color: var(--darker-main);
 }
 
 .current-temperature {
@@ -87,19 +92,19 @@ li:first-letter {
 
 .top-upper-left {
  text-align: start;
- padding-left: 100px;
+ margin-left: 100px;
 }
 
 .top-upper-right {
  text-align: end;
- padding-right: 100px;
+ margin-right: 100px;
 }
 
-ul {
+.weather-details {
  font-size: 20px;
  font-weight: 100px;
  list-style: none;
- padding-left: 0px;
+ padding-inline-start: 0px;
 }
 
 .unit-convert {
@@ -113,5 +118,5 @@ ul {
 
 .weather-details,
 a {
- color: #00b6f8;
+ color: var(--lighter-main);
 }

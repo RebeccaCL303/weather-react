@@ -4,18 +4,18 @@ import "./Weather.css";
 
 export default function Weather() {
  return (
-  <div classNameNameName="Weather">
-   <form id="city-search">
-    <input type="text" id="city-input" placeholder="Enter City Here" />
-    <input type="submit" className="btn btn-outline-light" />
-   </form>
-   <h1>
-    <div className="container">
-     <div className="row">
-      <div className="col-6 top-upper-left">
+  <div className="Weather">
+   <div className="main-body">
+    <form className="text-center" id="city-search">
+     <input type="text" id="city-input" placeholder="Enter City Here" />
+     <input type="submit" className="btn btn-outline-light" />
+    </form>
+    <h1>
+     <div className="row justify-content-evenly">
+      <div className="col top-upper-left">
        <div className="city">Tokyo</div>
        <small>
-        <div className="date-time"></div>
+        <div className="date-time">Tuesday 3:02</div>
        </small>
        <ul className="weather-details">
         <li>
@@ -29,7 +29,7 @@ export default function Weather() {
         </li>
        </ul>
       </div>
-      <div className="col-6 top-upper-right">
+      <div className="col top-upper-right">
        <p className="current-emoji">🌧️</p>
        <span className="current-temperature">19</span>
        <span className="unit-convert">
@@ -45,8 +45,8 @@ export default function Weather() {
       </div>
       <div className="five-day"></div>
      </div>
-    </div>
-   </h1>
+    </h1>
+   </div>
   </div>
  );
 }
