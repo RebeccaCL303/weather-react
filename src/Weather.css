@@ -3,7 +3,7 @@
  --darker-main: #9c191b;
 }
 
-body {
+.Weather body {
  background-color: #151515;
  color: white;
  text-align: center;
@@ -16,18 +16,18 @@ body {
  padding-bottom: 20px;
 }
 
-.card {
+.Weather .card {
  border: 0.5px solid transparent;
  background: transparent;
  margin: 0px;
 }
 
-.card-body {
+.Weather .card-body {
  padding: 5px 0px;
  color: white;
 }
 
-.city {
+.Weather .city {
  font-size: 50px;
  font-weight: bold;
  color: white;
@@ -40,13 +40,13 @@ body {
  color: var(--darker-main);
 }
 
-.current-temperature {
+.Weather .current-temperature {
  font-size: 60px;
  font-weight: bold;
  color: white;
 }
 
-.five-day {
+.Weather .five-day {
  border-radius: 10px;
  text-align: center;
  max-width: 850px;
@@ -57,27 +57,27 @@ body {
  line-height: 1.3;
 }
 
-.high-low strong {
- color: #00c5ff;
+.Weather .high-low strong {
+ color: var(--lighter-main);
 }
 
-h1 {
+.Weather h1 {
  top: 20px;
  position: relative;
 }
 
-input {
+.Weather input {
  border-radius: 10px;
  position: relative;
  padding: 5px 20px;
- top: 5px;
+ top: 10px;
 }
 
-li:first-letter {
+.Weather li:first-letter {
  text-transform: capitalize;
 }
 
-.main-body {
+.Weather .main-body {
  border: 3px solid white;
  max-width: 900px;
  background-color: #121212;
@@ -90,33 +90,33 @@ li:first-letter {
  top: 40px;
 }
 
-.top-upper-left {
+.Weather .top-upper-left {
  text-align: start;
  margin-left: 100px;
 }
 
-.top-upper-right {
+.Weather .top-upper-right {
  text-align: end;
  margin-right: 100px;
 }
 
-.weather-details {
+.Weather .weather-details {
  font-size: 20px;
  font-weight: 100px;
  list-style: none;
  padding-inline-start: 0px;
 }
 
-.unit-convert {
+.Weather .unit-convert {
  font-size: 15px;
  font-weight: bold;
 }
 
-.unit-convert .active {
+.Weather .unit-convert .active {
  color: white;
 }
 
-.weather-details,
+.Weather .weather-details,
 a {
  color: var(--lighter-main);
 }
