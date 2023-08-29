@@ -1,11 +1,13 @@
 import React from "react";
 import Weather from "./Weather.js";
 
+import "./App.css";
+
 function App() {
  return (
   <div className="App container">
    <Weather />
-   <p>
+   <footer>
     <a
      href="https://github.com/BEX-0/weather-react"
      target="_blank"
@@ -14,7 +16,7 @@ function App() {
      <strong>Open Source Code</strong>
     </a>{" "}
     by Rebecca Leibowitz
-   </p>
+   </footer>
   </div>
  );
 }

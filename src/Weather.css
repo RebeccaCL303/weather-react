@@ -10,7 +10,7 @@ body {
  font-family: "Ubuntu", sans serif;
 }
 
-a {
+.Weather a {
  text-decoration: none;
  color: var(--darker-main);
  padding-bottom: 20px;

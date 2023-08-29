@@ -1,0 +1,13 @@
+:root {
+ --lighter-main: #dd2c2f;
+}
+
+.App a {
+ color: var(--lighter-main);
+ text-decoration: none;
+}
+
+footer {
+ text-align: center;
+ font-size: 18px;
+}
