@@ -3,7 +3,7 @@ import Weather from "./Weather.js";
 
 function App() {
  return (
-  <div className="App">
+  <div className="App container">
    <h1>Weather App</h1>
    <Weather />
    <p>
