@@ -5,7 +5,8 @@ import "./Weather.css";
 
 export default function Weather() {
  const key = "82f43b0671f2tb328187o7be4ab620aa";
- let [city, setCity] = useState("Lisbon");
+ let [currentDetails, setCurrentDetails] = useState(null);
+ let [city, setCity] = useState("");
  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
 
  function changeCity(event) {
@@ -18,13 +19,19 @@ export default function Weather() {
  }
 
  function displayCurrent(response) {
-  console.log(response.data);
+  setCurrentDetails(
+   <ul className="weather-details">
+    <li>{response.data.condition.description}</li>
+    <li>Humidity: {response.data.temperature.humidity}%</li>
+    <li>Wind: {response.data.wind.speed}km/h</li>
+   </ul>
+  );
  }
 
  return (
   <div className="Weather">
    <div className="main-body">
-    <form className="text-center">
+    <form className="text-center" onSubmit={getCurrent}>
      <input type="text" placeholder="Enter City Here" onChange={changeCity} />
      <input type="submit" className="btn btn-outline-light ms-1" />
     </form>
@@ -33,17 +40,7 @@ export default function Weather() {
       <div className="col top-upper-left">
        <div className="city">Tokyo</div>
        <div className="date-time fs-3 fw-normal">Tuesday 3:02</div>
-       <ul className="weather-details">
-        <li>
-         <span className="current-condition">Cloudy</span>
-        </li>
-        <li>
-         Humidity: <span className="humidity">34%</span>
-        </li>
-        <li>
-         Wind: <span className="wind">2.4km/h</span>
-        </li>
-       </ul>
+       <section>{currentDetails}</section>
       </div>
       <div className="col top-upper-right">
        <p className="current-emoji">🌧️</p>
