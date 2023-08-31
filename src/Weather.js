@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 import "./Weather.css";
 
 export default function Weather() {
+ const key = "82f43b0671f2tb328187o7be4ab620aa";
+ let [city, setCity] = useState("Lisbon");
+ let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
+
+ function changeCity(event) {
+  setCity(event.target.value);
+ }
+
+ function getCurrent(event) {
+  event.preventDefault();
+  axios.get(url).then(displayCurrent);
+ }
+
+ function displayCurrent(response) {
+  console.log(response.data);
+ }
+
  return (
   <div className="Weather">
    <div className="main-body">
-    <form className="text-center" id="city-search">
-     <input type="text" id="city-input" placeholder="Enter City Here" />
+    <form className="text-center">
+     <input type="text" placeholder="Enter City Here" onChange={changeCity} />
      <input type="submit" className="btn btn-outline-light ms-1" />
     </form>
     <h1>
