@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import "./Weather.css";
+import DateTime from "./DateTime.js";
 
 export default function Weather() {
  let [city, setCity] = useState("");
  let [weatherData, setWeatherData] = useState({ done: false });
- let [done, setDone] = useState(false);
 
  function changeCity(event) {
   setCity(event.target.value);
@@ -19,6 +19,7 @@ export default function Weather() {
  }
 
  function displayCurrent(response) {
+  console.log(response.data.time);
   setWeatherData({
    done: true,
    city: `${response.data.city}`,
@@ -40,13 +41,17 @@ export default function Weather() {
        placeholder="Enter City Here"
        onChange={changeCity}
       />
-      <input type="submit" className="btn btn-outline-light ms-1" />
+      <input
+       type="submit"
+       className="btn btn-outline-light ms-1"
+       value="Submit"
+      />
      </form>
      <h1>
       <div className="row justify-content-evenly">
        <div className="col upper-left">
         <div>{weatherData.city}</div>
-        <div className="fs-3 fw-normal">Tuesday 3:02</div>
+        <DateTime />
         <ul>
          <li className="text-capitalize">{weatherData.description}</li>
          <li>Humidity: {weatherData.humidity}</li>
@@ -79,7 +84,11 @@ export default function Weather() {
        placeholder="Enter City Here"
        onChange={changeCity}
       />
-      <input type="submit" className="btn btn-outline-light ms-1" />
+      <input
+       type="submit"
+       className="btn btn-outline-light ms-1"
+       value="Submit"
+      />
      </form>
     </div>
    </div>
