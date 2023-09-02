@@ -54,7 +54,7 @@ export default function Weather() {
         </ul>
        </div>
        <div className="col upper-right">
-        <span>🌧️</span>
+        <img src={weatherData.icon} alt="weather-icon" />
         <span className="current-temperature">{weatherData.temperature}</span>
         <span className="unit-convert">
          {" "}
