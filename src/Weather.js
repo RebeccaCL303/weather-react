@@ -4,8 +4,8 @@ import axios from "axios";
 import "./Weather.css";
 import CurrentWeather from "./CurrentWeather.js";
 
-export default function Weather() {
- let [city, setCity] = useState("");
+export default function Weather(props) {
+ let [city, setCity] = useState(props.defaultCity);
  let [weatherData, setWeatherData] = useState({ done: false });
 
  function changeCity(event) {
@@ -31,19 +31,30 @@ export default function Weather() {
   });
  }
 
- return (
-  <div className="Weather">
-   <div className="main-body">
-    <form onSubmit={getCurrent}>
-     <input type="search" placeholder="Enter City Here" onChange={changeCity} />
-     <input
-      type="submit"
-      className="btn btn-outline-light ms-1"
-      value="Submit"
-     />
-    </form>
-    <CurrentWeather data={weatherData} />
+ if (weatherData.done) {
+  return (
+   <div className="Weather">
+    <div className="main-body">
+     <form onSubmit={getCurrent}>
+      <input
+       type="search"
+       placeholder="Enter City Here"
+       onChange={changeCity}
+      />
+      <input
+       type="submit"
+       className="btn btn-outline-light ms-1"
+       value="Submit"
+      />
+     </form>
+     <CurrentWeather data={weatherData} />
+    </div>
    </div>
-  </div>
- );
+  );
+ } else {
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=82f43b0671f2tb328187o7be4ab620aa&units=metric`;
+  axios.get(url).then(displayCurrent);
+
+  return <p>Loading...</p>;
+ }
 }
