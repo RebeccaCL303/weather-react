@@ -8,22 +8,20 @@ export default function Weather() {
  let [currentDetails, setCurrentDetails] = useState(null);
  let [done, setDone] = useState(false);
 
- let key = "82f43b0671f2tb328187o7be4ab620aa";
-
  function changeCity(event) {
   setCity(event.target.value);
  }
 
  function getCurrent(event) {
   event.preventDefault();
-  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=82f43b0671f2tb328187o7be4ab620aa&units=metric`;
   axios.get(url).then(displayCurrent);
   setDone(true);
  }
 
  function displayCurrent(response) {
   setCurrentDetails(
-   <ul className="weather-details">
+   <ul>
     <li>{response.data.condition.description}</li>
     <li>Humidity: {response.data.temperature.humidity}%</li>
     <li>Wind: {response.data.wind.speed}km/h</li>
@@ -36,17 +34,21 @@ export default function Weather() {
    <div className="Weather">
     <div className="main-body">
      <form onSubmit={getCurrent}>
-      <input type="text" placeholder="Enter City Here" onChange={changeCity} />
+      <input
+       type="search"
+       placeholder="Enter City Here"
+       onChange={changeCity}
+      />
       <input type="submit" className="btn btn-outline-light ms-1" />
      </form>
      <h1>
       <div className="row justify-content-evenly">
-       <div className="col top-upper-left">
-        <div className="city">Tokyo</div>
+       <div className="col upper-left">
+        <div>Tokyo</div>
         <div className="fs-3 fw-normal">Tuesday 3:02</div>
         <section>{currentDetails}</section>
        </div>
-       <div className="col top-upper-right">
+       <div className="col upper-right">
         <p>🌧️</p>
         <span className="current-temperature">19</span>
         <span className="unit-convert">
@@ -67,7 +69,11 @@ export default function Weather() {
    <div className="Weather">
     <div className="main-body">
      <form onSubmit={getCurrent}>
-      <input type="text" placeholder="Enter City Here" onChange={changeCity} />
+      <input
+       type="search"
+       placeholder="Enter City Here"
+       onChange={changeCity}
+      />
       <input type="submit" className="btn btn-outline-light ms-1" />
      </form>
     </div>

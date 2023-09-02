@@ -17,7 +17,7 @@
 
 .Weather .current-temperature,
 .Weather .high-low,
-.Weather .weather-details {
+.Weather ul {
  font-family: monospace;
  color: var(--darker-main);
 }
@@ -61,17 +61,7 @@
  top: 40px;
 }
 
-.Weather .top-upper-left {
- text-align: start;
- margin-left: 100px;
-}
-
-.Weather .top-upper-right {
- text-align: end;
- margin-right: 100px;
-}
-
-.Weather .weather-details {
+.Weather ul {
  font-size: 20px;
  font-weight: 100;
  list-style: none;
@@ -87,7 +77,17 @@
  color: white;
 }
 
-.Weather .weather-details,
+.Weather ul,
 a {
  color: var(--lighter-main);
+}
+
+.Weather .upper-left {
+ text-align: start;
+ margin-left: 100px;
+}
+
+.Weather .upper-right {
+ text-align: end;
+ margin-right: 100px;
 }
