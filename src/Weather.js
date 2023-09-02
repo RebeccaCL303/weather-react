@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import "./Weather.css";
-import DateTime from "./DateTime.js";
+import CurrentWeather from "./CurrentWeather.js";
 
 export default function Weather() {
  let [city, setCity] = useState("");
@@ -31,67 +31,19 @@ export default function Weather() {
   });
  }
 
- if (weatherData.done) {
-  return (
-   <div className="Weather">
-    <div className="main-body">
-     <form onSubmit={getCurrent}>
-      <input
-       type="search"
-       placeholder="Enter City Here"
-       onChange={changeCity}
-      />
-      <input
-       type="submit"
-       className="btn btn-outline-light ms-1"
-       value="Submit"
-      />
-     </form>
-     <h1>
-      <div className="row justify-content-evenly">
-       <div className="col upper-left">
-        <div>{weatherData.city}</div>
-        <DateTime />
-        <ul>
-         <li className="text-capitalize">{weatherData.description}</li>
-         <li>Humidity: {weatherData.humidity}</li>
-         <li>Wind: {weatherData.wind}</li>
-        </ul>
-       </div>
-       <div className="col upper-right">
-        <img src={weatherData.icon} alt="weather-icon" />
-        <span className="current-temperature">{weatherData.temperature}</span>
-        <span className="unit-convert">
-         {" "}
-         <a href="/" className="active">
-          °C
-         </a>{" "}
-         | <a href="/">°F</a>
-        </span>
-       </div>
-      </div>
-     </h1>
-    </div>
+ return (
+  <div className="Weather">
+   <div className="main-body">
+    <form onSubmit={getCurrent}>
+     <input type="search" placeholder="Enter City Here" onChange={changeCity} />
+     <input
+      type="submit"
+      className="btn btn-outline-light ms-1"
+      value="Submit"
+     />
+    </form>
+    <CurrentWeather data={weatherData} />
    </div>
-  );
- } else {
-  return (
-   <div className="Weather">
-    <div className="main-body">
-     <form onSubmit={getCurrent}>
-      <input
-       type="search"
-       placeholder="Enter City Here"
-       onChange={changeCity}
-      />
-      <input
-       type="submit"
-       className="btn btn-outline-light ms-1"
-       value="Submit"
-      />
-     </form>
-    </div>
-   </div>
-  );
- }
+  </div>
+ );
 }
