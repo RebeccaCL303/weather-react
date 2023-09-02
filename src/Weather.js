@@ -35,7 +35,7 @@ export default function Weather() {
   return (
    <div className="Weather">
     <div className="main-body">
-     <form className="text-center" onSubmit={getCurrent}>
+     <form onSubmit={getCurrent}>
       <input type="text" placeholder="Enter City Here" onChange={changeCity} />
       <input type="submit" className="btn btn-outline-light ms-1" />
      </form>
@@ -43,30 +43,35 @@ export default function Weather() {
       <div className="row justify-content-evenly">
        <div className="col top-upper-left">
         <div className="city">Tokyo</div>
-        <div className="date-time fs-3 fw-normal">Tuesday 3:02</div>
+        <div className="fs-3 fw-normal">Tuesday 3:02</div>
         <section>{currentDetails}</section>
        </div>
        <div className="col top-upper-right">
-        <p className="current-emoji">🌧️</p>
+        <p>🌧️</p>
         <span className="current-temperature">19</span>
         <span className="unit-convert">
          {" "}
-         <a href="/" id="celsiusLink" className="active">
+         <a href="/" className="active">
           °C
          </a>{" "}
-         |{" "}
-         <a href="/" id="fahrenheitLink">
-          °F
-         </a>
+         | <a href="/">°F</a>
         </span>
        </div>
-       <div className="five-day"></div>
       </div>
      </h1>
     </div>
    </div>
   );
  } else {
-  return <p>Loading...</p>;
+  return (
+   <div className="Weather">
+    <div className="main-body">
+     <form onSubmit={getCurrent}>
+      <input type="text" placeholder="Enter City Here" onChange={changeCity} />
+      <input type="submit" className="btn btn-outline-light ms-1" />
+     </form>
+    </div>
+   </div>
+  );
  }
 }
