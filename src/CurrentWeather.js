@@ -2,6 +2,7 @@ import React from "react";
 
 import DateTime from "./DateTime.js";
 import Icon from "./Icon.js";
+import TempConvert from "./TempConvert.js";
 
 export default function CurrentWeather(props) {
  return (
@@ -19,14 +20,7 @@ export default function CurrentWeather(props) {
      </div>
      <div className="col upper-right">
       <Icon code={props.data.icon} />
-      <span className="current-temperature">{props.data.temperature}</span>
-      <span className="unit-convert">
-       {" "}
-       <a href="/" className="active">
-        °C
-       </a>{" "}
-       | <a href="/">°F</a>
-      </span>
+      <TempConvert celsius={props.data.temperature} />
      </div>
     </div>
    </h1>
