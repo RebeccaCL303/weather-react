@@ -54,7 +54,5 @@ export default function Weather(props) {
  } else {
   let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=82f43b0671f2tb328187o7be4ab620aa&units=metric`;
   axios.get(url).then(displayCurrent);
-
-  return <p>Loading...</p>;
  }
 }

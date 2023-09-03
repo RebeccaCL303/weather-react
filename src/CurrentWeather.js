@@ -1,6 +1,7 @@
 import React from "react";
 
 import DateTime from "./DateTime.js";
+import Icon from "./Icon.js";
 
 export default function CurrentWeather(props) {
  return (
@@ -17,7 +18,7 @@ export default function CurrentWeather(props) {
       </ul>
      </div>
      <div className="col upper-right">
-      <img src={props.data.icon} alt="weather-icon" />
+      <Icon code={props.data.icon} />
       <span className="current-temperature">{props.data.temperature}</span>
       <span className="unit-convert">
        {" "}
