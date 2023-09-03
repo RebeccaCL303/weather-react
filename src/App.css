@@ -1,20 +1,25 @@
 :root {
- --lighter-main: #dd2c2f;
+ --lighter-main: #a2c1fb;
+ --darker-main: #78a1ff;
 }
 
 .App {
- background-color: #151515;
+ background-color: #01122d;
  color: white;
  margin: 0px;
 }
 
 .App a {
- color: var(--lighter-main);
+ color: var(--darker-main);
  text-decoration: none;
 }
 
 .App footer {
  text-align: center;
  font-size: 18px;
- padding-bottom: 40px;
+ padding-bottom: 80px;
+}
+
+.App footer a {
+ color: var(--lighter-main);
 }

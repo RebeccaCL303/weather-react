@@ -1,8 +1,3 @@
-:root {
- --lighter-main: #dd2c2f;
- --darker-main: #9c191b;
-}
-
 .Weather {
  color: white;
  text-align: center;

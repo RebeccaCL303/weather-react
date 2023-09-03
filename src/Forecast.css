@@ -1,0 +1,25 @@
+.Forecast {
+ text-align: center;
+ margin-top: 80px;
+}
+
+.Forecast .day {
+ font-size: 28px;
+ font-weight: 600;
+ opacity: 0.8;
+}
+
+.Forecast .high {
+ color: var(--lighter-main);
+ font-weight: 600;
+}
+
+.Forecast .low {
+ color: var(--darker-main);
+}
+
+.Forecast .high,
+.Forecast .low {
+ font-family: monospace;
+ font-size: 25px;
+}
