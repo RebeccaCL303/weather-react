@@ -11,13 +11,22 @@ export default function Forecast(props) {
  function getForecast(response) {
   setDone(true);
   setForecast(response.data.daily);
-  console.log(forecast);
  }
 
  if (done) {
   return (
    <div className="Forecast">
-    <ForecastDay data={forecast} />
+    <div className="row">
+     {forecast.map(function (day, index) {
+      if (index < 5) {
+       return (
+        <div className="col" key={index}>
+         <ForecastDay data={day} />
+        </div>
+       );
+      }
+     })}
+    </div>
    </div>
   );
  } else {
