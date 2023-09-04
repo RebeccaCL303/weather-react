@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function TempConvert(props) {
+export default function CurrentTempConvert(props) {
  let [unit, setUnit] = useState("metric");
  let fahrenheitTemp = Math.round((props.celsius * 9) / 5 + 32);
 
@@ -20,7 +20,7 @@ export default function TempConvert(props) {
 
  if (unit === "metric") {
   return (
-   <span className="TempConvert">
+   <span className="CurrentTempConvert">
     <span className="current-temperature">{props.celsius}</span>
     <span className="unit-convert">
      {" "}

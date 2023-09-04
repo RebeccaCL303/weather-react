@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Icon from "./Icon.js";
 import ForecastDay from "./ForecastDay.js";
 
 import "./Forecast.css";
@@ -12,6 +11,7 @@ export default function Forecast(props) {
  function getForecast(response) {
   setDone(true);
   setForecast(response.data.daily);
+  console.log(forecast);
  }
 
  if (done) {
