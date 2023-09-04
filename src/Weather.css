@@ -4,21 +4,6 @@
  font-family: "Ubuntu", sans serif;
 }
 
-.Weather a {
- text-decoration: none;
- color: var(--darker-main);
- padding-bottom: 20px;
-}
-
-.Weather ul {
- font-family: monospace;
- color: var(--darker-main);
-}
-
-.Weather .high-low strong {
- color: var(--lighter-main);
-}
-
 .Weather h1 {
  top: 20px;
  position: relative;
@@ -29,10 +14,6 @@
  position: relative;
  padding: 5px 20px;
  top: 10px;
-}
-
-.Weather li:first-letter {
- text-transform: capitalize;
 }
 
 .Weather .main-body {
@@ -53,6 +34,8 @@
  font-weight: 100;
  list-style: none;
  padding-inline-start: 0px;
+ font-family: monospace;
+ color: var(--darker-main);
 }
 
 .Weather .unit-convert {
@@ -62,11 +45,6 @@
 
 .Weather .unit-convert .active {
  color: white;
-}
-
-.Weather ul,
-a {
- color: var(--lighter-main);
 }
 
 .Weather .upper-left {
