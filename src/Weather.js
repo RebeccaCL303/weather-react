@@ -20,7 +20,6 @@ export default function Weather(props) {
  }
 
  function displayCurrent(response) {
-  console.log(response.data.time);
   setWeatherData({
    done: true,
    city: `${response.data.city}`,
@@ -49,7 +48,7 @@ export default function Weather(props) {
       />
      </form>
      <CurrentWeather data={weatherData} />
-     <Forecast />
+     <Forecast city={city} />
     </div>
    </div>
   );

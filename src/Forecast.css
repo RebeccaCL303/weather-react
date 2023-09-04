@@ -6,7 +6,7 @@
 .Forecast .day {
  font-size: 28px;
  font-weight: 600;
- opacity: 0.8;
+ margin-bottom: 5px;
 }
 
 .Forecast .high {
