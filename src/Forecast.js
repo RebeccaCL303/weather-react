@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Icon from "./Icon.js";
+import ForecastDay from "./ForecastDay.js";
 
 import "./Forecast.css";
 
@@ -16,16 +17,7 @@ export default function Forecast(props) {
  if (done) {
   return (
    <div className="Forecast">
-    <div className="row">
-     <div className="col">
-      <div className="day">{forecast[0].time}</div>
-      <div>
-       <Icon code={forecast[0].condition.icon} />
-       <div className="high">{forecast[0].temperature.maximum}°</div>
-       <div className="low">{forecast[0].temperature.minimum}°</div>
-      </div>
-     </div>
-    </div>
+    <ForecastDay data={forecast} />
    </div>
   );
  } else {
