@@ -10,7 +10,7 @@ export default function CurrentWeather(props) {
    <h1>
     <div className="row justify-content-evenly">
      <div className="col upper-left">
-      <div>{props.data.city}</div>
+      <div className="city">{props.data.city}</div>
       <DateTime />
       <ul>
        <li className="text-capitalize">{props.data.description}</li>
@@ -19,7 +19,7 @@ export default function CurrentWeather(props) {
       </ul>
      </div>
      <div className="col upper-right">
-      <Icon code={props.data.icon} />
+      <Icon code={props.data.icon} size="100" />
       <CurrentTempConvert celsius={props.data.temperature} />
      </div>
     </div>

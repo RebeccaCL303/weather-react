@@ -4,6 +4,22 @@
  font-family: "Ubuntu", sans serif;
 }
 
+.Weather .city {
+ font-size: 50px;
+}
+
+.Weather .current-temperature {
+ font-size: 60px;
+}
+
+.Weather .upper-right canvas {
+ margin-right: 15px;
+}
+
+.Weather .DateTime {
+ opacity: 0.7;
+}
+
 .Weather h1 {
  top: 20px;
  position: relative;
@@ -22,8 +38,7 @@
  background-color: #121212;
  display: block;
  margin: 0 auto;
- padding-bottom: 50px;
- margin-bottom: 75px;
+ padding: 0px 30px 40px;
  border-radius: 10px;
  position: relative;
  top: 40px;
@@ -49,10 +64,10 @@
 
 .Weather .upper-left {
  text-align: start;
- margin-left: 100px;
+ margin-left: 50px;
 }
 
 .Weather .upper-right {
  text-align: end;
- margin-right: 100px;
+ margin-right: 50px;
 }

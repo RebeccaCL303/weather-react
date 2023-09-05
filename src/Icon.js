@@ -24,11 +24,11 @@ export default function Icon(props) {
  };
 
  return (
-  <span className="Icon me-2">
+  <span className="Icon">
    <ReactAnimatedWeather
     icon={codeMapping[props.code]}
     color="white"
-    size={80}
+    size={props.size}
     animate={true}
    />
   </span>
