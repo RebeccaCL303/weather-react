@@ -17,7 +17,7 @@ export default function ForecastDay(props) {
  return (
   <div className="ForecastDay">
    <div className="day">{getDay()}</div>
-   <Icon code={props.data.condition.icon} size="80" />
+   <Icon code={props.data.condition.icon} size={80} />
    <div className="high">{Math.round(props.data.temperature.maximum)}°</div>
    <div className="low">{Math.round(props.data.temperature.minimum)}°</div>
   </div>
