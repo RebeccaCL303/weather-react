@@ -8,6 +8,7 @@ import Forecast from "./Forecast.js";
 export default function Weather(props) {
  let [city, setCity] = useState(props.defaultCity);
  let [weatherData, setWeatherData] = useState({ done: false });
+ let key = "82f43b0671f2tb328187o7be4ab620aa";
 
  function changeCity(event) {
   setCity(event.target.value);
@@ -15,13 +16,14 @@ export default function Weather(props) {
 
  function getCurrent(event) {
   event.preventDefault();
-  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=82f43b0671f2tb328187o7be4ab620aa&units=metric`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
   axios.get(url).then(displayCurrent);
  }
 
  function displayCurrent(response) {
   setWeatherData({
    done: true,
+   coordinates: response.data.coordinates,
    city: `${response.data.city}`,
    description: `${response.data.condition.description}`,
    humidity: `${response.data.temperature.humidity}%`,
@@ -48,12 +50,12 @@ export default function Weather(props) {
       />
      </form>
      <CurrentWeather data={weatherData} />
-     <Forecast city={city} />
+     <Forecast coords={weatherData.coordinates} />
     </div>
    </div>
   );
  } else {
-  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=82f43b0671f2tb328187o7be4ab620aa&units=metric`;
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${key}&units=metric`;
   axios.get(url).then(displayCurrent);
  }
 }
