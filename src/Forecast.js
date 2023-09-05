@@ -28,6 +28,8 @@ export default function Forecast(props) {
          <ForecastDay data={day} />
         </div>
        );
+      } else {
+       return null;
       }
      })}
     </div>
@@ -37,5 +39,7 @@ export default function Forecast(props) {
   let key = "82f43b0671f2tb328187o7be4ab620aa";
   let url = `https://api.shecodes.io/weather/v1/forecast?lat=${props.coords.latitude}&lon=${props.coords.longitude}&key=${key}&units=metric`;
   axios.get(url).then(getForecast);
+
+  return null;
  }
 }
