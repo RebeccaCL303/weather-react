@@ -71,3 +71,23 @@
  text-align: end;
  margin-right: 50px;
 }
+
+@media (max-width: 576px) {
+ .Weather input {
+  padding: 5px;
+ }
+
+ .Weather .current-temperature {
+  font-size: 40px;
+ }
+
+ .Weather .upper-left,
+ .Weather .upper-right {
+  text-align: center;
+  margin: 0;
+ }
+ .Weather ul {
+  font-size: 18px;
+  line-height: 1.4;
+ }
+}
