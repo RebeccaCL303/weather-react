@@ -36,4 +36,12 @@
   margin: auto;
   padding-top: 30px;
  }
+
+ .Forecast .col {
+  padding: 0;
+ }
+
+ .Forecast canvas {
+  max-width: 50px;
+ }
 }
