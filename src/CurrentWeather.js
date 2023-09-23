@@ -4,12 +4,14 @@ import DateTime from "./DateTime.js";
 import Icon from "./Icon.js";
 import CurrentTempConvert from "./CurrentTempConvert.js";
 
+import "./CurrentWeather.css";
+
 export default function CurrentWeather(props) {
  return (
   <div className="CurrentWeather">
    <h1>
     <div className="row justify-content-evenly">
-     <div className="col upper-left">
+     <div className="col">
       <div className="city">{props.data.city}</div>
       <DateTime />
       <ul>
@@ -18,7 +20,7 @@ export default function CurrentWeather(props) {
        <li>Wind: {props.data.wind}</li>
       </ul>
      </div>
-     <div className="col upper-right">
+     <div className="col ">
       <Icon code={props.data.icon} size={100} />
       <CurrentTempConvert celsius={props.data.temperature} />
      </div>

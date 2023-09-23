@@ -1,0 +1,45 @@
+.CurrentWeather .col:first-of-type {
+ text-align: start;
+ margin-left: 50px;
+}
+
+.CurrentWeather .col:last-of-type {
+ text-align: end;
+ margin-right: 50px;
+}
+
+.CurrentWeather .col:last-of-type canvas {
+ margin-right: 15px;
+}
+
+.CurrentWeather h1 {
+ top: 20px;
+ position: relative;
+}
+
+.CurrentWeather ul {
+ font-size: 20px;
+ font-weight: 100;
+ font-family: monospace;
+ color: var(--darker-main);
+}
+
+.CurrentWeather .unit-convert {
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.CurrentWeather .unit-convert .active {
+ color: white;
+}
+
+@media (max-width) {
+ .CurrentWeather .col {
+  margin: 0;
+ }
+
+ .CurrentWeather ul {
+  font-size: 18px;
+  line-height: 1.4;
+ }
+}

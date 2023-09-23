@@ -23,3 +23,8 @@
 .App footer a {
  color: var(--lighter-main);
 }
+
+.App ul {
+ list-style: none;
+ padding-inline-start: 0;
+}

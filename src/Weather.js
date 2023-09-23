@@ -36,7 +36,7 @@ export default function Weather(props) {
  if (weatherData.done) {
   return (
    <div className="Weather">
-    <div className="main-body">
+    <main>
      <form name="city-search" onSubmit={getCurrent}>
       <input
        type="search"
@@ -51,7 +51,7 @@ export default function Weather(props) {
      </form>
      <CurrentWeather data={weatherData} />
      <Forecast coords={weatherData.coordinates} />
-    </div>
+    </main>
    </div>
   );
  } else {

@@ -18,7 +18,7 @@ export default function DateTime() {
   minute = `0${minute}`;
  }
  return (
-  <div className="DateTime fs-3 fw-normal">
+  <div className="DateTime fs-3 fw-normal opacity-75">
    {day} {hour}:{minute}
   </div>
  );

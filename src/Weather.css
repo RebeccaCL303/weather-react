@@ -12,19 +12,6 @@
  font-size: 60px;
 }
 
-.Weather .upper-right canvas {
- margin-right: 15px;
-}
-
-.Weather .DateTime {
- opacity: 0.7;
-}
-
-.Weather h1 {
- top: 20px;
- position: relative;
-}
-
 .Weather input {
  border-radius: 10px;
  position: relative;
@@ -32,7 +19,7 @@
  top: 10px;
 }
 
-.Weather .main-body {
+.Weather main {
  border: 3px solid white;
  max-width: 900px;
  background-color: #121212;
@@ -44,34 +31,6 @@
  top: 40px;
 }
 
-.Weather ul {
- font-size: 20px;
- font-weight: 100;
- list-style: none;
- padding-inline-start: 0px;
- font-family: monospace;
- color: var(--darker-main);
-}
-
-.Weather .unit-convert {
- font-size: 15px;
- font-weight: bold;
-}
-
-.Weather .unit-convert .active {
- color: white;
-}
-
-.Weather .upper-left {
- text-align: start;
- margin-left: 50px;
-}
-
-.Weather .upper-right {
- text-align: end;
- margin-right: 50px;
-}
-
 @media (max-width: 576px) {
  .Weather input {
   padding: 5px;
@@ -79,15 +38,5 @@
 
  .Weather .current-temperature {
   font-size: 40px;
- }
-
- .Weather .upper-left,
- .Weather .upper-right {
-  text-align: center;
-  margin: 0;
- }
- .Weather ul {
-  font-size: 18px;
-  line-height: 1.4;
  }
 }
