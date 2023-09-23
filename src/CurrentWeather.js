@@ -9,23 +9,21 @@ import "./CurrentWeather.css";
 export default function CurrentWeather(props) {
  return (
   <div className="CurrentWeather">
-   <h1>
-    <div className="row justify-content-evenly">
-     <div className="col">
-      <div className="city">{props.data.city}</div>
-      <DateTime />
-      <ul>
-       <li className="text-capitalize">{props.data.description}</li>
-       <li>Humidity: {props.data.humidity}</li>
-       <li>Wind: {props.data.wind}</li>
-      </ul>
-     </div>
-     <div className="col ">
-      <Icon code={props.data.icon} size={100} />
-      <CurrentTempConvert celsius={props.data.temperature} />
-     </div>
+   <div className="row justify-content-evenly">
+    <div className="col">
+     <div className="city">{props.data.city}</div>
+     <DateTime />
+     <ul>
+      <li className="text-capitalize">{props.data.description}</li>
+      <li>Humidity: {props.data.humidity}</li>
+      <li>Wind: {props.data.wind}</li>
+     </ul>
     </div>
-   </h1>
+    <div className="col ">
+     <Icon code={props.data.icon} size={100} />
+     <CurrentTempConvert celsius={props.data.temperature} />
+    </div>
+   </div>
   </div>
  );
 }

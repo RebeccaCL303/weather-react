@@ -8,11 +8,20 @@
  margin-right: 50px;
 }
 
-.CurrentWeather .col:last-of-type canvas {
+.CurrentWeather .col canvas {
  margin-right: 15px;
 }
 
-.CurrentWeather h1 {
+.CurrentWeather .city {
+ font-size: 50px;
+ margin-bottom: 0;
+}
+
+.CurrentWeather .current-temperature {
+ font-size: 60px;
+}
+
+.CurrentWeather .row {
  top: 20px;
  position: relative;
 }
@@ -33,9 +42,21 @@
  color: white;
 }
 
-@media (max-width) {
- .CurrentWeather .col {
+@media (max-width: 576px) {
+ .CurrentWeather .city {
+  font-size: 40px;
+ }
+
+ .CurrentWeather .col:first-of-type {
   margin: 0;
+ }
+
+ .CurrentWeather .col:last-of-type {
+  margin: 30px 0 0 0;
+ }
+
+ .CurrentWeather .col canvas {
+  display: none;
  }
 
  .CurrentWeather ul {
