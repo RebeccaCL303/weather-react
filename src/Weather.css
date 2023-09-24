@@ -32,7 +32,13 @@
 }
 
 @media (max-width: 576px) {
- .Weather input {
+ .Weather input,
+ .Weather main {
   padding: 5px;
+ }
+
+ .Weather form {
+  display: flex;
+  justify-content: center;
  }
 }
